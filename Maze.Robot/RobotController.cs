@@ -10,6 +10,8 @@ namespace Maze.Solver
     public class RobotController
     {
         private IRobot robot;
+
+        // Nice :-) I like that you used a tuple here
         private List<(int x, int y)> visitedPositions = new List<(int x, int y)>();
         bool reachedEnd = false;
 
@@ -37,6 +39,8 @@ namespace Maze.Solver
         /// </remarks>
         public void MoveRobotToExit()
         {
+            // Tip: Remove comments that are no longer relevant. This confuses developers
+            // who have to maintain your code.
             // Here you have to add your code
 
             // Trivial sample algorithm that can just move right
@@ -96,6 +100,7 @@ namespace Maze.Solver
                 case Direction.Down:
                     return Direction.Up;
                 default:
+                    // Nice :-) Many people forget that this is necessary.
                     throw new Exception("Unknown Direction");
             }
         }
